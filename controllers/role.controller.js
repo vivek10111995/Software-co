@@ -4,6 +4,11 @@ const Role = require('../models/Role');
 exports.createRole = async (req, res) => {
   const { roleName, accessModules, active } = req.body;
   try {
+    const existingUser = await Role.findOne({ roleName });
+    if (existingUser) {
+      return res.status(409).json({ error: 'Role already exists' });
+    }
+
     const role = new Role({ roleName, accessModules, active });
     await role.save();
     res.status(201).json(role);

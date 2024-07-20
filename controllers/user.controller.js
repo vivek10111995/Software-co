@@ -7,6 +7,11 @@ const jwt = require("jsonwebtoken");
 exports.signup = async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
   try {
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(409).json({ error: 'Email address already exists' });
+    }
+
     const user = new User({ firstName, lastName, email, password });
     await user.save();
     res.status(201).json(user);
