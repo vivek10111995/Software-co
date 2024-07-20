@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "7f22fb7e-b35d-4f2a-8f58-af3bc1295bdf",
+		"name": "Mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20249630"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjliOTdmODFmNmU0ZjE0NGFjZWI2NjkiLCJpYXQiOjE3MjE0NzMwMjQsImV4cCI6MTcyMTQ3NjYyNH0.bzmq9VuNp69QOUwlgTqDSuwZVL_dMcauWzDnjBB_IdU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/users?search=",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjliOTdmODFmNmU0ZjE0NGFjZWI2NjkiLCJpYXQiOjE3MjE0NzMwMjQsImV4cCI6MTcyMTQ3NjYyNH0.bzmq9VuNp69QOUwlgTqDSuwZVL_dMcauWzDnjBB_IdU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"VIVKEG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/users/669b976d0bf1593439661869",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"669b976d0bf1593439661869"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjliOTdmODFmNmU0ZjE0NGFjZWI2NjkiLCJpYXQiOjE3MjE0NzMwMjQsImV4cCI6MTcyMTQ3NjYyNH0.bzmq9VuNp69QOUwlgTqDSuwZVL_dMcauWzDnjBB_IdU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"VIVKEG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/users/669b976d0bf1593439661869",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"669b976d0bf1593439661869"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Many user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjliOTdmODFmNmU0ZjE0NGFjZWI2NjkiLCJpYXQiOjE3MjE0NzMwMjQsImV4cCI6MTcyMTQ3NjYyNH0.bzmq9VuNp69QOUwlgTqDSuwZVL_dMcauWzDnjBB_IdU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"updateData\": {\r\n        \"lastName\": \"ABCD\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/users/update-many",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"update-many"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-individual",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjliOTdmODFmNmU0ZjE0NGFjZWI2NjkiLCJpYXQiOjE3MjE0NzMwMjQsImV4cCI6MTcyMTQ3NjYyNH0.bzmq9VuNp69QOUwlgTqDSuwZVL_dMcauWzDnjBB_IdU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"updates\": [\r\n        {\r\n            \"id\": \"669b976d0bf1593439661869\",\r\n            \"data\": {\r\n                \"firstName\": \"John\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"669b97f81f6e4f144aceb669\",\r\n            \"data\": {\r\n                \"email\": \"newemail@example.com\",\r\n                \"role\": \"669ba284fe5df3ad7bdf1643\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/users/update-individual",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"update-individual"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-access",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjliOTdmODFmNmU0ZjE0NGFjZWI2NjkiLCJpYXQiOjE3MjE0NzMwMjQsImV4cCI6MTcyMTQ3NjYyNH0.bzmq9VuNp69QOUwlgTqDSuwZVL_dMcauWzDnjBB_IdU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"669b97f81f6e4f144aceb669\",\r\n    \"module\": \"all\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/users/check-access",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"check-access"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "create role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Admin\",\r\n    \"accessModules\": \"all\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/roles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Roles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Admin\",\r\n    \"accessModules\": \"all\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/roles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Roles",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Admin Role\",\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/roles/669ba1f9fe5df3ad7bdf163e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"roles",
+								"669ba1f9fe5df3ad7bdf163e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Roles",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"Admin Role\",\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/roles/669ba1f9fe5df3ad7bdf163e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"roles",
+								"669ba1f9fe5df3ad7bdf163e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Vivek\",\r\n    \"lastName\": \"Gotecha\",\r\n    \"email\": \"v12@gmail.com\",\r\n    \"password\": \"vivek@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"v12@gmail.com\",\r\n    \"password\": \"vivek@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
